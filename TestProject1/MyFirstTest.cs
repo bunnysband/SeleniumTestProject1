@@ -16,7 +16,7 @@ namespace TestProject1
         [SetUp]
         public void start()
         {
-            driver = new FirefoxDriver();
+            driver = new FirefoxDriver("c:\\tools");
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
         }
 
@@ -24,9 +24,6 @@ namespace TestProject1
         public void FirstTest()
         {
             driver.Url = "http://software-testing.ru/";
-            //driver.FindElement(By.Name("q")).SendKeys("webdriver");
-            //driver.FindElement(By.Name("btnG")).Click();
-            //wait.Until(ExpectedConditions.TitleIs("webdriver - Поиск в Google"));
         }
 
         [TearDown]
