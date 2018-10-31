@@ -3,6 +3,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Support.UI;
 
 namespace TestProject2
@@ -19,7 +21,7 @@ namespace TestProject2
         [SetUp]
         public void Start()
         {
-            driver = new FirefoxDriver("c:\\tools");
+            driver = new InternetExplorerDriver();
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
         }
 
