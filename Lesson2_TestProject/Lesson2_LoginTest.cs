@@ -7,7 +7,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Support.UI;
 
-namespace TestProject2
+namespace Lesson2_TestProject
 {
     [TestFixture]
     public class Lesson2_LoginTest
