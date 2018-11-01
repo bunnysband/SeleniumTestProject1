@@ -17,7 +17,7 @@ namespace Lesson4_TestProject
     {
         List<IWebElement> FindProducts()
         {
-            return driver.FindElements(By.CssSelector("#box-campaign-products [class^='product column hover']")).ToList();
+            return driver.FindElements(By.CssSelector("li[class='product column shadow hover-light']")).ToList();
         }
 
         [Test]
