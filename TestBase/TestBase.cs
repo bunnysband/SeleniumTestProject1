@@ -1,5 +1,4 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
@@ -7,7 +6,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Support.UI;
 
-namespace TestBase
+namespace SeleniumTestBase
 {
     public class TestBase
     {
@@ -17,9 +16,14 @@ namespace TestBase
         string passWord = "admin";
         string mainPageUrl = "http://localhost/litecart";
 
-        protected void LoginAdmin()
+        protected void LoadAdminPageAndLogin()
         {
             driver.Url = $"{mainPageUrl}/admin/";
+            AdminLogin();
+        }
+
+        protected void AdminLogin()
+        {
             driver.FindElement(By.Name("username")).SendKeys(userName);
             driver.FindElement(By.Name("password")).SendKeys(passWord);
             driver.FindElement(By.Name("login")).Click();

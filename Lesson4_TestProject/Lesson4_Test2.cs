@@ -1,23 +1,22 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Support.UI;
-using TestBase;
+using SeleniumTestBase;
 using System.Linq;
 using System.Collections.Generic;
 
 namespace Lesson4_TestProject
 {
     [TestFixture]
-    public class Lesson4_Test2: TestBase.TestBase
+    public class Lesson4_Test2: TestBase
     {
         List<IWebElement> FindProducts()
         {
-            return driver.FindElements(By.CssSelector("li[class='product column shadow hover-light']")).ToList();
+            return driver.FindElements(By.CssSelector(".content div[id ^= box] .product.column")).ToList();
         }
 
         [Test]

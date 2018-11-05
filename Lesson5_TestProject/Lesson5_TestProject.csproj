@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4B6C1BFB-7077-4529-AD29-90B1EF9F4FC6}</ProjectGuid>
+    <ProjectGuid>{98306F08-5211-419D-8546-19A7A747D053}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lesson3_TestProject</RootNamespace>
-    <AssemblyName>Lesson3_TestProject</AssemblyName>
+    <RootNamespace>Lesson5_TestProject</RootNamespace>
+    <AssemblyName>Lesson5_TestProject</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -53,8 +53,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Lesson4_Test2.cs" />
-    <Compile Include="Lesson4_Test1.cs" />
+    <Compile Include="Lesson5_Test2.cs" />
+    <Compile Include="Lesson5_Test1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
