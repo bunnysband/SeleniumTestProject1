@@ -16,7 +16,7 @@ namespace Lesson4_TestProject
     {
         List<IWebElement> FindProducts()
         {
-            return driver.FindElements(By.CssSelector(".content div[id ^= box] .product.column")).ToList();
+            return driver.FindElements(By.CssSelector("#main ul.listing-wrapper.products .product.column.shadow")).ToList();
         }
 
         [Test]
