@@ -14,7 +14,7 @@ namespace SeleniumTestBase
         protected WebDriverWait wait;
         string userName = "admin";
         string passWord = "admin";
-        string mainPageUrl = "http://localhost:8080/litecart";
+        string mainPageUrl = "http://localhost/litecart";
 
         protected void LoadAdminPageAndLogin()
         {
