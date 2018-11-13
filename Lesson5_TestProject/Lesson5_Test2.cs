@@ -21,7 +21,7 @@ namespace Lesson5_TestProject
 
         IWebElement GetFirtstProductFromCamapaigns()
         {
-            return driver.FindElement(By.CssSelector("#box-campaigns li.product.column"));
+            return driver.FindElement(By.CssSelector("#box-campaigns li.product.column a"));
         }
 
         IWebElement GetProductOnMainPageAttribute(string cssSelector)
