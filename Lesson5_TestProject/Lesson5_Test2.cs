@@ -48,10 +48,10 @@ namespace Lesson5_TestProject
             string campaignPriceOnMainPage = GetProductOnMainPageAttribute(campaignPriceCssSelector).Text;
             string regularPriceOnMainPageFontSize = GetProductOnMainPageAttribute(regularPriceCssSelector).GetCssValue("font-size");
             string regularPriceOnMainPageFontColor = GetProductOnMainPageAttribute(regularPriceCssSelector).GetCssValue("color");
-            string regularPriceOnMainPageFontStyle = GetProductOnMainPageAttribute(regularPriceCssSelector).GetCssValue("text-decoration-line");
+            string regularPriceOnMainPageTagName = GetProductOnMainPageAttribute(regularPriceCssSelector).TagName;
             string campaignPriceOnMainPageFontSize = GetProductOnMainPageAttribute(campaignPriceCssSelector).GetCssValue("font-size");
             string campaignPriceOnMainPageFontColor = GetProductOnMainPageAttribute(campaignPriceCssSelector).GetCssValue("color");
-            string campaignPriceOnMainPageFontStyle = GetProductOnMainPageAttribute(campaignPriceCssSelector).GetCssValue("font-weight");
+            string campaignPriceOnMainPageTagName = GetProductOnMainPageAttribute(campaignPriceCssSelector).TagName;
 
             GetFirtstProductFromCamapaigns().Click();
 
@@ -60,10 +60,10 @@ namespace Lesson5_TestProject
             string campaignPriceOnProductPage = GetProductOnItsPageAttribute(campaignPriceCssSelector).Text;
             string regularPriceOnProductPageFontSize = GetProductOnItsPageAttribute(regularPriceCssSelector).GetCssValue("font-size");
             string regularPriceOnProductPageFontColor = GetProductOnItsPageAttribute(regularPriceCssSelector).GetCssValue("color");
-            string regularPriceOnProductPageFontStyle = GetProductOnItsPageAttribute(regularPriceCssSelector).GetCssValue("text-decoration-line");
+            string regularPriceOnProductPageTagName = GetProductOnItsPageAttribute(regularPriceCssSelector).TagName;
             string campaignPriceOnProductPageFontSize = GetProductOnItsPageAttribute(campaignPriceCssSelector).GetCssValue("font-size");
             string campaignPriceOnProductPageFontColor = GetProductOnItsPageAttribute(campaignPriceCssSelector).GetCssValue("color");
-            string campaignPriceOnProductPageFontStyle = GetProductOnItsPageAttribute(campaignPriceCssSelector).GetCssValue("font-weight");
+            string campaignPriceOnProductPageTagName = GetProductOnItsPageAttribute(campaignPriceCssSelector).TagName;
 
             regularPriceOnMainPageFontSize = Regex.Match(regularPriceOnMainPageFontSize, @"[0-9.,]{1,}").Value;
             campaignPriceOnMainPageFontSize = Regex.Match(campaignPriceOnMainPageFontSize, @"[0-9.,]{1,}").Value;
@@ -77,16 +77,16 @@ namespace Lesson5_TestProject
             Assert.AreEqual(productNameOnMainPage, productNameOnProductPage);
             Assert.AreEqual(regularPriceOnMainPage, regularPriceOnProductPage);
             Assert.AreEqual(campaignPriceOnMainPage, campaignPriceOnProductPage);
-            Assert.AreEqual(regularPriceOnMainPageFontStyle, "line-through");
+            Assert.AreEqual(regularPriceOnMainPageTagName, "s");
             Assert.AreEqual(regColorOnMain[0], regColorOnMain[1]);
             Assert.AreEqual(regColorOnMain[0], regColorOnMain[2]);
-            Assert.AreEqual(campaignPriceOnMainPageFontStyle, "700");
+            Assert.AreEqual(campaignPriceOnMainPageTagName, "strong");
             Assert.AreEqual(campColorOnMain[1], 0);
             Assert.AreEqual(campColorOnMain[2], 0);
-            Assert.AreEqual(regularPriceOnProductPageFontStyle, "line-through");
+            Assert.AreEqual(regularPriceOnProductPageTagName, "s");
             Assert.AreEqual(regColorOnProduct[0], regColorOnProduct[1]);
             Assert.AreEqual(regColorOnProduct[0], regColorOnProduct[2]);
-            Assert.AreEqual(campaignPriceOnProductPageFontStyle, "700");
+            Assert.AreEqual(campaignPriceOnProductPageTagName, "strong");
             Assert.AreEqual(campColorOnProduct[1], 0);
             Assert.AreEqual(campColorOnProduct[2], 0);
             Assert.Greater(campaignPriceOnMainPageFontSize, regularPriceOnMainPageFontSize);
