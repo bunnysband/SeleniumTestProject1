@@ -5,6 +5,8 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Support.UI;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace SeleniumTestBase
 {
@@ -47,6 +49,11 @@ namespace SeleniumTestBase
         {
             driver.Quit();
             driver = null;
+        }
+
+        protected List<IWebElement> FindProducts()
+        {
+            return driver.FindElements(By.CssSelector("#main ul.listing-wrapper.products .product.column.shadow")).ToList();
         }
     }
 }
