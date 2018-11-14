@@ -14,6 +14,8 @@ namespace SeleniumTestBase
     {
         protected IWebDriver driver;
         protected WebDriverWait wait;
+        protected const string countriesUrl = "http://localhost/litecart/admin/?app=countries&doc=countries";
+        protected const string geoZonezUrl = "http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones";
         string userName = "admin";
         string passWord = "admin";
         string mainPageUrl = "http://localhost/litecart";

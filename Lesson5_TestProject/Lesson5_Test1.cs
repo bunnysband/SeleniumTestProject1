@@ -14,9 +14,6 @@ namespace Lesson5_TestProject
     [TestFixture]
     public class Lesson5_Test1 : TestBase
     {
-        string url1 = "http://localhost/litecart/admin/?app=countries&doc=countries";
-        string url2 = "http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones";
-
         List<IWebElement> GetCountries()
         {
             return driver.FindElements(By.CssSelector("form[name=countries_form] .row")).ToList();
@@ -42,7 +39,7 @@ namespace Lesson5_TestProject
         {
             List<string> countryNames = new List<string>();
             List<string> countryWithZonesUrls = new List<string>();
-            driver.Url = url1;
+            driver.Url = countriesUrl;
             AdminLogin();
             for (int i = 0; i < GetCountries().Count; i++)
             {
@@ -73,7 +70,7 @@ namespace Lesson5_TestProject
         [Test]
         public void Test2()
         {
-            driver.Url = url2;
+            driver.Url = geoZonezUrl;
             AdminLogin();
             for (int i = 0; i < GetZones().Count; i++)
             {
