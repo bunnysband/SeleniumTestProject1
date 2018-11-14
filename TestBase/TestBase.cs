@@ -55,7 +55,7 @@ namespace SeleniumTestBase
 
         protected List<IWebElement> FindProducts()
         {
-            return driver.FindElements(By.CssSelector("#main ul.listing-wrapper.products .product.column.shadow")).ToList();
+            return driver.FindElements(By.CssSelector("#main ul.products .product")).ToList();
         }
     }
 }
