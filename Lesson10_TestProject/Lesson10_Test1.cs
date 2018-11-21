@@ -26,7 +26,7 @@ namespace Lesson10_TestProject
                 {
                     ProductRows()[i].FindElement(By.CssSelector("a[href*=edit_product]")).Click();
                 }
-                catch { continue; }
+                catch(NoSuchElementException) { continue; }
                 var logs = driver.Manage().Logs.GetLog("browser");
                 CollectionAssert.IsEmpty(logs);
                 driver.Navigate().Back();
