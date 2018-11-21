@@ -20,6 +20,7 @@ namespace Lesson10_TestProject
         {
             driver.Url = catalogUrl;
             AdminLogin();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(500);
             for (int i = 0; i < ProductRows().Count; i++)
             {
                 try
