@@ -99,11 +99,5 @@ namespace Lesson6_TestProject
             CollectionAssert.Contains(products, productName);
 
         }
-
-        List<IWebElement> ProductRows()
-        {
-            return driver.FindElements(By.CssSelector("form[name=catalog_form] table tr.row")).ToList();
-        }
-
     }
 }

@@ -16,6 +16,7 @@ namespace SeleniumTestBase
         protected WebDriverWait wait;
         protected const string countriesUrl = "http://localhost/litecart/admin/?app=countries&doc=countries";
         protected const string geoZonezUrl = "http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones";
+        protected const string catalogUrl = "http://localhost/litecart/admin/?app=catalog&doc=catalog&category_id=1";
         string userName = "admin";
         string passWord = "admin";
         string mainPageUrl = "http://localhost/litecart";
@@ -56,6 +57,11 @@ namespace SeleniumTestBase
         protected List<IWebElement> FindProducts()
         {
             return driver.FindElements(By.CssSelector("#main ul.products .product")).ToList();
+        }
+
+        protected List<IWebElement> ProductRows()
+        {
+            return driver.FindElements(By.CssSelector("form[name=catalog_form] table tr.row")).ToList();
         }
     }
 }
