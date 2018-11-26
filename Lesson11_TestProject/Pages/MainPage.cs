@@ -10,7 +10,7 @@ namespace Lesson11_TestProject.Pages
 {
     public class MainPage: Page
     {
-        const string url = "http://localhost:8080/litecart";
+        const string url = "http://localhost/litecart";
         const string productsLocator = "#main ul.products .product";
         public MainPage(IWebDriver driver) : base(driver) { }
 
